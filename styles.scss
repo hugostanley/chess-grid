@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.background {
+  height: 100vh;
+  width: 100vw;
+  background-image: radial-gradient(
+    rgb(82, 78, 78) 5%,
+    rgb(82, 68, 63) 10%,
+    rgb(61, 48, 44) 65%
+  );
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(8, 5em);
+  grid-template-rows: repeat(8, 5em);
+  gap: 0.4em;
+}
+
+.box {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  font-size: 2rem;
+  // box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px,
+  //   rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px,
+  //   rgba(240, 46, 170, 0.05) 0px 25px;
+  box-shadow: rgb(46, 43, 26) 0px 5px;
+  border-radius: 25px;
+  border-bottom: 0.4rem outset rgb(204, 184, 147);
+}
+
+.white {
+  background-color: rgb(98, 67, 53);
+}
+
+.black {
+  background-color: rgb(66, 48, 47);
+}
+
+.white-piece {
+  color: white;
+}
+.black-piece,
+.white-piece {
+  // display: none;
+}
+
+.box {
+  animation-name: breathe;
+  animation-duration: 0.89s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in;
+}
+
+@keyframes breathe {
+  0% {
+    height: inherit;
+    width: inherit;
+  }
+
+  11% {
+    height: 2.49em;
+    width: 2.49em;
+  }
+
+  25% {
+    height: 2.48em;
+    width: 2.48em;
+  }
+
+  36% {
+    height: 2.47em;
+    width: 2.47em;
+  }
+  50% {
+    height: 2.46em;
+    width: 2.46em;
+  }
+
+  61% {
+    height: 2.45em;
+    width: 2.45em;
+  }
+
+  75% {
+    height: 2.44em;
+    width: 2.44em;
+  }
+
+  86% {
+    height: 2.43em;
+    width: 2.43em;
+  }
+  100% {
+    height: 2.42em;
+    width: 2.42em;
+  }
+}
+
+// .a1 {
+//   border-bottom-left-radius: 1.7rem;
+// }
+
+// .a8 {
+//   border-top-left-radius: 1.7rem;
+// }
+
+// .h1 {
+//   border-bottom-right-radius: 1.7rem;
+// }
+
+// .h8 {
+//   border-top-right-radius: 1.7rem;
+// }
+
+// @media screen and (max-width: 670px) {
+//   .grid-container {
+//     grid-template-columns: repeat(8, 2.5em);
+//     grid-template-rows: repeat(8, 2.5em);
+//   }
+
+//   .box {
+//     font-size: 1em;
+//   }
+
+//   .a1 {
+//     border-bottom-left-radius: 1.8em;
+//   }
+
+//   .a8 {
+//     border-top-left-radius: 1.8em;
+//   }
+
+//   .h1 {
+//     border-bottom-right-radius: 1.8em;
+//   }
+
+//   .h8 {
+//     border-top-right-radius: 1.8em;
+//   }
+// }
