@@ -17,17 +17,19 @@
 
 .grid-container {
   @include grid-item-align(false, false);
-  grid-template-columns: repeat(8, 5em);
-  grid-template-rows: repeat(8, 5em);
-  gap: 0.6em;
+
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  gap: 1.8vmin;
 }
 
 .box {
   @include grid-item-align(center, center);
-  font-size: 2.8rem;
-  box-shadow: rgb(46, 43, 26) 0px 5px;
-  border-radius: 25px;
-  border-bottom: 0.4rem outset rgb(204, 184, 147);
+  @include vmin(9vmin);
+  font-size: 5vmin;
+  box-shadow: rgb(46, 43, 26) 0vmin 1.8vmin 0.5vmin -0.9vmin;
+  border-radius: 2.7vmin;
+  border-bottom: 1vmin outset rgb(204, 184, 147);
 }
 
 .white {
@@ -41,24 +43,4 @@
 .white-piece,
 .black-piece {
   color: $primary-dark;
-}
-
-@media screen and (max-width: 800px) {
-  @include screen-800();
-}
-
-@media screen and (max-width: 620px) {
-  @include screen-620();
-}
-
-@media screen and (max-width: 540px) {
-  @include screen-540();
-}
-
-@media screen and (max-width: 460px) {
-  @include screen-460();
-}
-
-@media screen and (max-width: 350px) {
-  @include screen-350();
 }
