@@ -1,71 +1,25 @@
-.box {
-  animation-name: breathe;
-  animation-duration: 0.89s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: ease-in-out;
-}
-
-@keyframes breathe {
-  0% {
-    transform: perspective(200px) translateZ(1px);
-  }
-  100% {
-    transform: perspective(200px) translateZ(0.3em);
-  }
-}
-* {
+@mixin reset {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-.background {
-  height: 100vh;
-  width: 100vw;
-  background-image: radial-gradient(rgb(82, 78, 78) 5%, rgb(82, 68, 63) 10%, rgb(61, 48, 44) 65%);
+@mixin grid-item-align($justify-items: false, $align-items: false) {
   display: grid;
-  justify-items: center;
-  align-items: center;
+  @if $justify-items {
+    justify-items: $justify-items;
+  }
+  @if $align-items {
+    align-items: $align-items;
+  }
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(8, 5em);
-  grid-template-rows: repeat(8, 5em);
-  gap: 0.6em;
-}
-
-.box {
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  font-size: 2.8rem;
-  box-shadow: rgb(46, 43, 26) 0px 5px;
-  border-radius: 25px;
-  border-bottom: 0.4rem outset rgb(204, 184, 147);
-}
-
-.white {
-  background-color: #ec834f;
-}
-
-.black {
-  background-color: #ab2e18;
-}
-
-.white-piece,
-.black-piece {
-  color: #2e0c0b;
-}
-
-@media screen and (max-width: 800px) {
+@mixin screen-800 {
   .grid-container {
     grid-template-columns: repeat(8, 4em);
     grid-template-rows: repeat(8, 4em);
     gap: 0.4em;
   }
-
   .box {
     font-size: 2.5rem;
     box-shadow: rgb(46, 43, 26) 0px 5px;
@@ -73,7 +27,8 @@
     border-bottom: 0.2rem outset rgb(204, 184, 147);
   }
 }
-@media screen and (max-width: 620px) {
+
+@mixin screen-620 {
   .grid-container {
     grid-template-columns: repeat(8, 3.5em);
     grid-template-rows: repeat(8, 3.5em);
@@ -87,7 +42,8 @@
     border-bottom: 0.2rem outset rgb(204, 184, 147);
   }
 }
-@media screen and (max-width: 540px) {
+
+@mixin screen-540 {
   .grid-container {
     grid-template-columns: repeat(8, 3em);
     grid-template-rows: repeat(8, 3em);
@@ -101,7 +57,8 @@
     border-bottom: 0.2rem outset rgb(204, 184, 147);
   }
 }
-@media screen and (max-width: 460px) {
+
+@mixin screen-460 {
   .grid-container {
     grid-template-columns: repeat(8, 2.2em);
     grid-template-rows: repeat(8, 2.2em);
@@ -115,7 +72,8 @@
     border-bottom: 0.2rem outset rgb(204, 184, 147);
   }
 }
-@media screen and (max-width: 350px) {
+
+@mixin screen-350 {
   .grid-container {
     grid-template-columns: repeat(8, 1.8em);
     grid-template-rows: repeat(8, 1.8em);
@@ -129,5 +87,3 @@
     border-bottom: 0.2rem outset rgb(204, 184, 147);
   }
 }
-
-/*# sourceMappingURL=styles.css.map */
