@@ -7,11 +7,7 @@
 .background {
   height: 100vh;
   width: 100vw;
-  background-image: radial-gradient(
-    rgb(82, 78, 78) 5%,
-    rgb(82, 68, 63) 10%,
-    rgb(61, 48, 44) 65%
-  );
+  background-image: radial-gradient(rgb(82, 78, 78) 5%, rgb(82, 68, 63) 10%, rgb(61, 48, 44) 65%);
   @include grid-item-align(center, center);
 }
 
@@ -44,6 +40,19 @@
   color: $primary-dark;
 }
 
+.g2,
+.f2,
 .d8 {
   z-index: 1;
+  cursor: pointer;
+}
+
+.g2:hover,
+.f2:hover,
+.d8:hover {
+  font-size: 5.5vmin;
+}
+
+#btn {
+  cursor: pointer;
 }

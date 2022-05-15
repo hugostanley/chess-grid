@@ -16,7 +16,7 @@
   }
 }
 
-.queen-black {
+.last__queen {
   animation-name: stan;
   animation-duration: 2s;
   animation-fill-mode: forwards;
@@ -32,4 +32,12 @@
   to {
     transform: translate(42.9vmin, 42.9vmin);
   }
+}
+
+.pawn--f2 {
+  background-color: yellow;
+}
+
+.f3--try {
+  background-color: black;
 }

@@ -14,7 +14,7 @@
     transform: perspective(200px) translateZ(0.4em);
   }
 }
-.queen-black {
+.last__queen {
   animation-name: stan;
   animation-duration: 2s;
   animation-fill-mode: forwards;
@@ -30,6 +30,14 @@
     transform: translate(42.9vmin, 42.9vmin);
   }
 }
+.pawn--f2 {
+  background-color: yellow;
+}
+
+.f3--try {
+  background-color: black;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -81,8 +89,21 @@
   color: #2e0c0b;
 }
 
+.g2,
+.f2,
 .d8 {
   z-index: 1;
+  cursor: pointer;
+}
+
+.g2:hover,
+.f2:hover,
+.d8:hover {
+  font-size: 5.5vmin;
+}
+
+#btn {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=styles.css.map */
