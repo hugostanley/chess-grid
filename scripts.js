@@ -10,5 +10,8 @@ function foolsMate() {
     pawnf2.addEventListener("click", function () {
       document.getElementById("f3").classList.add("f3--try");
     });
+  } else {
+    let name = "stan";
+    console.log(name);
   }
 }
