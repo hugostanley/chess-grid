@@ -14,7 +14,7 @@
     transform: perspective(200px) translateZ(0.4em);
   }
 }
-.last__queen {
+.queen-black {
   animation-name: stan;
   animation-duration: 2s;
   animation-fill-mode: forwards;
@@ -30,14 +30,6 @@
     transform: translate(42.9vmin, 42.9vmin);
   }
 }
-.pawn--f2 {
-  background-color: yellow;
-}
-
-.f3--try {
-  background-color: black;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
